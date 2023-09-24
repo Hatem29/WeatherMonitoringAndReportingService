@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WeatherBots\BotConfiguration.cs" />
+    <Compile Include="IWeatherBotConfiguration.cs" />
+    <Compile Include="Repositories\IWeatherBotConfigurationRepo.cs" />
+    <Compile Include="Repositories\WeatherBotConfigurationRepo.cs" />
+    <Compile Include="WeatherBots\WeatherBotConfiguration.cs" />
     <Compile Include="WeatherConfiguration\IBotConfigurer.cs" />
     <Compile Include="InputHandling\IWeatherDataHandler.cs" />
     <Compile Include="WeatherConfiguration\WeatherBotConfigurer.cs" />
@@ -64,8 +67,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ConfigurationRepos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

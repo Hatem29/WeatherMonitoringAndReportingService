@@ -8,6 +8,10 @@ namespace WeatherMonitoringAndReportingService.Repositories
 {
     public class WeatherBotConfigurationRepo : IWeatherBotConfigurationRepo
     {
+        public WeatherBotConfigurationRepo()
+        {
+            FilePath = "...";
+        }
         public string FilePath { get; set; }
 
         public string ReadWeatherBotConfiguration()

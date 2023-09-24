@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace WeatherMonitoringAndReportingService
 {
-    interface IWeatherBotConfiguration
+    public interface IWeatherBotConfigurer
     {
-
+        IWeatherBot ConfigureBot(IWeatherBot weatherBot, WeatherBotConfigurationBase weatherBotConfiguration);
     }
 }

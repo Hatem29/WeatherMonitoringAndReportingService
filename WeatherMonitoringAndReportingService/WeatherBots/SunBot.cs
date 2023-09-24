@@ -19,6 +19,11 @@ namespace WeatherMonitoringAndReportingService.WeatherBots
             throw new NotImplementedException();
         }
 
+        public void SetWeatherInfoFromConfiguration(WeatherBotConfigurationBase weatherBotConfiguration)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(WeatherInfo weatherInfo)
         {
             currentWeather = weatherInfo;

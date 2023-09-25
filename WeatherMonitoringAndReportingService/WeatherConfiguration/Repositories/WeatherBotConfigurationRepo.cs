@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WeatherMonitoringAndReportingService.Repositories
+namespace WeatherMonitoringAndReportingService
 {
     public class WeatherBotConfigurationRepo : IWeatherBotConfigurationRepo
     {
         public WeatherBotConfigurationRepo()
         {
-            FilePath = "...";
+            FilePath = @"C:\Users\Msi\source\repos\WeatherMonitoringAndReportingService\WeatherMonitoringAndReportingService\Files\BotConfiguration.json";
         }
         public string FilePath { get; set; }
 

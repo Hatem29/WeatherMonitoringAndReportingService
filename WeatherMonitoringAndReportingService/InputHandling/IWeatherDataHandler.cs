@@ -8,6 +8,6 @@ namespace WeatherMonitoringAndReportingService
 {
     interface IWeatherDataHandler
     {
-        WeatherInfo GetWeatherInfo(string s);
+        WeatherInfo GetWeatherInfo(string data);
     }
 }

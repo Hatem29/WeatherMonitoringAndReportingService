@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,9 @@ namespace WeatherMonitoringAndReportingService.Repositories
 
         public string ReadWeatherBotConfiguration()
         {
-            throw new NotImplementedException();
+            string content = File.ReadAllText(FilePath);
+
+            return content;
         }
     }
 }

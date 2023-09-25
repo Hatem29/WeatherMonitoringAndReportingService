@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WeatherMonitoringAndReportingService.WeatherBots
+namespace WeatherMonitoringAndReportingService
 {
-    public class RainBot : IWeatherBot, IWeatherObserver
+    public class RainBot : IWeatherBot
     {
         public WeatherBotConfigurationBase BotConfiguration = new WeatherBotConfiguration();
         WeatherInfo currentWeather = new WeatherInfo();

@@ -48,8 +48,8 @@
   <ItemGroup>
     <Compile Include="WeatherBots\WeatherBotsGenerator.cs" />
     <Compile Include="WeatherConfiguration\WeatherBotConfigurationBase.cs" />
-    <Compile Include="Repositories\IWeatherBotConfigurationRepo.cs" />
-    <Compile Include="Repositories\WeatherBotConfigurationRepo.cs" />
+    <Compile Include="WeatherConfiguration\Repositories\IWeatherBotConfigurationRepo.cs" />
+    <Compile Include="WeatherConfiguration\Repositories\WeatherBotConfigurationRepo.cs" />
     <Compile Include="WeatherConfiguration\IWeatherBotConfigurer.cs" />
     <Compile Include="WeatherConfiguration\WeatherBotConfiguration.cs" />
     <Compile Include="InputHandling\IWeatherDataHandler.cs" />

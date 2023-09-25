@@ -15,7 +15,7 @@ namespace WeatherMonitoringAndReportingService
         public List<IWeatherBot> GenerateWeatherBotsFromConfiguration(string ConfigurationData)
         {
             List<IWeatherBot> weatherBots = new List<IWeatherBot>();
-            var botsConfig = JsonConvert.DeserializeObject<Dictionary<string, WeatherBotConfigurationBase>>(ConfigurationData);
+            var botsConfig = JsonConvert.DeserializeObject<Dictionary<string, WeatherBotConfiguration>>(ConfigurationData);
 
             foreach(var config in botsConfig)
             {

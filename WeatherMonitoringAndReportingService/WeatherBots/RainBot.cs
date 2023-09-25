@@ -19,7 +19,7 @@ namespace WeatherMonitoringAndReportingService
 
         public void OnBotActivation()
         {
-            Console.WriteLine(currentWeather.Message);
+            Console.WriteLine(BotConfiguration.Message + '\n');
         }
 
         public void SetWeatherInfoFromConfiguration(WeatherBotConfigurationBase weatherBotConfiguration)

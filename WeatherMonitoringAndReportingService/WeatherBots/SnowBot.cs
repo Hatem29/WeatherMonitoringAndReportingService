@@ -12,14 +12,14 @@ namespace WeatherMonitoringAndReportingService
         WeatherInfo currentWeather = new WeatherInfo();
         public bool isActivated()
         {
-            if (currentWeather.Tempreture < BotConfiguration.TemperatureThreshold)
+            if (currentWeather.Temperature < BotConfiguration.TemperatureThreshold)
                 return true;
             return false;
         }
 
         public void OnBotActivation()
         {
-            Console.WriteLine(currentWeather.Message);
+            Console.WriteLine(BotConfiguration.Message + '\n');
         }
 
         public void SetWeatherInfoFromConfiguration(WeatherBotConfigurationBase weatherBotConfiguration)

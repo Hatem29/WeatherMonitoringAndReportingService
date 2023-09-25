@@ -11,12 +11,13 @@ namespace WeatherMonitoringAndReportingService
         List<IWeatherObserver> WeatherObserversList = new List<IWeatherObserver>();
         public void Attach(IWeatherObserver observer)
         {
-            WeatherObserversList.Add(observer);
+            if(observer != null)
+                WeatherObserversList.Add(observer);
         }
 
         public void Detach(IWeatherObserver observer)
         {
-            WeatherObserversList.Remove(observer);
+            WeatherObserversList.RemoveAll(item => item == observer);
         }
 
         public void Notify(WeatherInfo weatherInfo)

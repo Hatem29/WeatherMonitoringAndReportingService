@@ -14,7 +14,6 @@ namespace WeatherMonitoringAndReportingService
                 return null;
 
             weatherBot.SetWeatherInfoFromConfiguration(weatherBotConfiguration);
-
             return weatherBot;
         }
 

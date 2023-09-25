@@ -8,20 +8,23 @@ namespace WeatherMonitoringAndReportingService.WeatherBots
 {
     public class RainBot : IWeatherBot, IWeatherObserver
     {
+        public WeatherBotConfigurationBase BotConfiguration = new WeatherBotConfiguration();
         WeatherInfo currentWeather = new WeatherInfo();
         public bool isActivated()
         {
-            throw new NotImplementedException();
+            if (currentWeather.Humidity > BotConfiguration.HumidityThreshold)
+                return true;
+            return false;
         }
 
         public void OnBotActivation()
         {
-            throw new NotImplementedException();
+            Console.WriteLine(currentWeather.Message);
         }
 
         public void SetWeatherInfoFromConfiguration(WeatherBotConfigurationBase weatherBotConfiguration)
         {
-            throw new NotImplementedException();
+            BotConfiguration = weatherBotConfiguration;
         }
 
         public void Update(WeatherInfo weatherInfo)

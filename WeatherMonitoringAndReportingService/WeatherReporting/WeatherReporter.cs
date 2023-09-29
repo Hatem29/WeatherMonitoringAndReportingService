@@ -8,7 +8,7 @@ namespace WeatherMonitoringAndReportingService
 {
     public class WeatherReporter : IWeatherReporter
     {
-        List<IWeatherObserver> WeatherObserversList = new List<IWeatherObserver>();
+        public List<IWeatherObserver> WeatherObserversList = new List<IWeatherObserver>();
         public void Attach(IWeatherObserver observer)
         {
             if(observer != null)

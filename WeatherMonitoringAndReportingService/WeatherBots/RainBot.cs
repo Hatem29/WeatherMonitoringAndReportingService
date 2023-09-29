@@ -8,7 +8,7 @@ namespace WeatherMonitoringAndReportingService
 {
     public class RainBot : IWeatherBot
     {
-        public WeatherBotConfigurationBase BotConfiguration = new WeatherBotConfiguration();
+        public IWeatherBotConfiguration BotConfiguration = new WeatherBotConfiguration();
         WeatherInfo currentWeather = new WeatherInfo();
         public bool isActivated()
         {
@@ -22,7 +22,7 @@ namespace WeatherMonitoringAndReportingService
             Console.WriteLine(BotConfiguration.Message + '\n');
         }
 
-        public void SetWeatherInfoFromConfiguration(WeatherBotConfigurationBase weatherBotConfiguration)
+        public void SetWeatherInfoFromConfiguration(IWeatherBotConfiguration weatherBotConfiguration)
         {
             BotConfiguration = weatherBotConfiguration;
         }

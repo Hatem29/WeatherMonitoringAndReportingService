@@ -8,6 +8,6 @@ namespace WeatherMonitoringAndReportingService
 {
     public interface IWeatherBotConfigurer
     {
-        IWeatherBot ConfigureBot(IWeatherBot weatherBot, WeatherBotConfigurationBase weatherBotConfiguration);
+        IWeatherBot ConfigureBot(IWeatherBot weatherBot, IWeatherBotConfiguration weatherBotConfiguration);
     }
 }

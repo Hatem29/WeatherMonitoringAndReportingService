@@ -11,6 +11,6 @@ namespace WeatherMonitoringAndReportingService
         bool isActivated();
         void OnBotActivation();
 
-        void SetWeatherInfoFromConfiguration(WeatherBotConfigurationBase weatherBotConfiguration);
+        void SetWeatherInfoFromConfiguration(IWeatherBotConfiguration weatherBotConfiguration);
     }
 }

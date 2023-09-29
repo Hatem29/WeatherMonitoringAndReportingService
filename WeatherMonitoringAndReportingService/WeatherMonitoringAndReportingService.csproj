@@ -82,12 +82,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="WeatherBots\WeatherBotsGenerator.cs" />
-    <Compile Include="WeatherConfiguration\WeatherBotConfigurationBase.cs" />
+    <Compile Include="WeatherConfiguration\IWeatherBotConfiguration.cs" />
     <Compile Include="WeatherConfiguration\Repositories\IWeatherBotConfigurationRepo.cs" />
     <Compile Include="WeatherConfiguration\Repositories\WeatherBotConfigurationRepo.cs" />
     <Compile Include="WeatherConfiguration\IWeatherBotConfigurer.cs" />
     <Compile Include="WeatherConfiguration\WeatherBotConfiguration.cs" />
     <Compile Include="InputHandling\IWeatherDataHandler.cs" />
+    <Compile Include="WeatherConfiguration\WeatherBotConfigurationBase.cs" />
     <Compile Include="WeatherConfiguration\WeatherBotConfigurer.cs" />
     <Compile Include="WeatherReporting\IWeatherReporter.cs" />
     <Compile Include="WeatherBots\IWeatherObserver.cs" />

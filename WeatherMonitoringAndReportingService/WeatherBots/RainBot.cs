@@ -4,19 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WeatherMonitoringAndReportingService.WeatherBots
+namespace WeatherMonitoringAndReportingService
 {
-    public class RainBot : IWeatherBot, IWeatherObserver
+    public class RainBot : IWeatherBot
     {
+        public WeatherBotConfigurationBase BotConfiguration = new WeatherBotConfiguration();
         WeatherInfo currentWeather = new WeatherInfo();
         public bool isActivated()
         {
-            throw new NotImplementedException();
+            if (currentWeather.Humidity > BotConfiguration.HumidityThreshold)
+                return true;
+            return false;
         }
 
         public void OnBotActivation()
         {
-            throw new NotImplementedException();
+            Console.WriteLine(BotConfiguration.Message + '\n');
+        }
+
+        public void SetWeatherInfoFromConfiguration(WeatherBotConfigurationBase weatherBotConfiguration)
+        {
+            BotConfiguration = weatherBotConfiguration;
         }
 
         public void Update(WeatherInfo weatherInfo)

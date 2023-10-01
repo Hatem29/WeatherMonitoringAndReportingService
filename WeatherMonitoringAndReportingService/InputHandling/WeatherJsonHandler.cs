@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,10 @@ namespace WeatherMonitoringAndReportingService
 {
     public class WeatherJsonHandler : IWeatherDataHandler
     {
-        public WeatherInfo GetWeatherInfo(string s)
+        public WeatherInfo GetWeatherInfo(string data)
         {
-            throw new NotImplementedException();
+            WeatherInfo weatherInfo = JsonConvert.DeserializeObject<WeatherInfo>(data);
+            return weatherInfo;
         }
     }
 }

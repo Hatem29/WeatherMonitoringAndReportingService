@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace WeatherMonitoringAndReportingService
 {
-    public class BotConfiguration
-    {
+    public abstract class WeatherBotConfigurationBase
+    { 
         public bool Enabled { get; set; }
         public int HumidityThreshold { get; set; }
         public int TemperatureThreshold { get; set; }

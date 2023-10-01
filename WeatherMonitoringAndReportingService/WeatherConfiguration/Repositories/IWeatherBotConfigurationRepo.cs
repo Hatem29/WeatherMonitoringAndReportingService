@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace WeatherMonitoringAndReportingService
 {
-    public interface IBotConfigurer
+    public interface IWeatherBotConfigurationRepo
     {
-        void ConfiguerBot(bool enabled, double threshold, string message);
+        string ReadWeatherBotConfiguration();
     }
 }

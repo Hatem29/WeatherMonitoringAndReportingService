@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,8 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WeatherBots\BotConfiguration.cs" />
-    <Compile Include="WeatherConfiguration\IBotConfigurer.cs" />
+    <Compile Include="WeatherBots\WeatherBotsGenerator.cs" />
+    <Compile Include="WeatherConfiguration\WeatherBotConfigurationBase.cs" />
+    <Compile Include="WeatherConfiguration\Repositories\IWeatherBotConfigurationRepo.cs" />
+    <Compile Include="WeatherConfiguration\Repositories\WeatherBotConfigurationRepo.cs" />
+    <Compile Include="WeatherConfiguration\IWeatherBotConfigurer.cs" />
+    <Compile Include="WeatherConfiguration\WeatherBotConfiguration.cs" />
     <Compile Include="InputHandling\IWeatherDataHandler.cs" />
     <Compile Include="WeatherConfiguration\WeatherBotConfigurer.cs" />
     <Compile Include="WeatherReporting\IWeatherReporter.cs" />
@@ -63,9 +70,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Files\BotConfiguration.json" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ConfigurationRepos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties files_4botconfiguration_1json__JsonSchema="https://appsemble.app/api.json" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

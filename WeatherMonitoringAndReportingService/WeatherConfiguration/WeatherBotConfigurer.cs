@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace WeatherMonitoringAndReportingService
 {
-    public class WeatherBotConfigurer : IBotConfigurer
+    public class WeatherBotConfigurer : IWeatherBotConfigurer
     {
-        public void ConfiguerBot(bool enabled, double threshold, string message)
+        public IWeatherBot ConfigureBot(IWeatherBot weatherBot, WeatherBotConfigurationBase weatherBotConfiguration)
         {
-            throw new NotImplementedException();
+            if (!weatherBotConfiguration.Enabled)
+                return null;
+
+            weatherBot.SetWeatherInfoFromConfiguration(weatherBotConfiguration);
+            return weatherBot;
         }
+
     }
 }

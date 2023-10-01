@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace WeatherMonitoringAndReportingService
 {
-    public interface IWeatherBot
+    public interface IWeatherBot : IWeatherObserver
     {
         bool isActivated();
         void OnBotActivation();
+
+        void SetWeatherInfoFromConfiguration(WeatherBotConfigurationBase weatherBotConfiguration);
     }
 }

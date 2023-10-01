@@ -8,7 +8,7 @@ namespace WeatherMonitoringAndReportingService
 {
     public class WeatherBotConfigurer : IWeatherBotConfigurer
     {
-        public IWeatherBot ConfigureBot(IWeatherBot weatherBot, WeatherBotConfigurationBase weatherBotConfiguration)
+        public IWeatherBot ConfigureBot(IWeatherBot weatherBot, IWeatherBotConfiguration weatherBotConfiguration)
         {
             if (!weatherBotConfiguration.Enabled)
                 return null;

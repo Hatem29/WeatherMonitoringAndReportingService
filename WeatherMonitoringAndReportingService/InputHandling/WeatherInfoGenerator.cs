@@ -1,28 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WeatherMonitoringAndReportingService
+﻿namespace WeatherMonitoringAndReportingService
 {
     public class WeatherInfoGenerator
     {
         public WeatherInfoGenerator(string rawData)
         {
-           RawData = rawData;
+            RawData = rawData;
         }
 
         public string RawData { get; set; }
-        IWeatherDataHandler weatherDataHandler;
+        public IWeatherDataHandler weatherDataHandler;
 
         public WeatherInfo GenerateWetherInfo()
         {
-            if(RawData[0] == '<')
+            if (RawData[0] == '<')
             {
                 weatherDataHandler = new WeatherXmlHandler();
             }
-            else if(RawData[0] == '{' || RawData[0] == '[')
+            else if (RawData[0] == '{' || RawData[0] == '[')
             {
                 weatherDataHandler = new WeatherJsonHandler();
             }
@@ -31,6 +25,6 @@ namespace WeatherMonitoringAndReportingService
 
             return weatherInfo;
         }
-        
+
     }
 }

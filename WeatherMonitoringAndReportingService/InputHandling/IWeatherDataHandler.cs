@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WeatherMonitoringAndReportingService
 {
-    interface IWeatherDataHandler
+    public interface IWeatherDataHandler
     {
         WeatherInfo GetWeatherInfo(string data);
     }

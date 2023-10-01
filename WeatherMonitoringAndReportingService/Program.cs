@@ -13,7 +13,7 @@ namespace WeatherMonitoringAndReportingService
             IWeatherBotConfigurationRepo configurationRepo = new WeatherBotConfigurationRepo();
             string configurationData = configurationRepo.ReadWeatherBotConfiguration();
 
-            WeatherBotsGenerator weatherBotsGenerator = new WeatherBotsGenerator();
+            WeatherBotsGenerator weatherBotsGenerator = new WeatherBotsGenerator(new WeatherBotConfigurer());
             List<IWeatherBot> weatherBots = weatherBotsGenerator.GenerateWeatherBotsFromConfiguration(configurationData);
 
             IWeatherReporter weatherReporter = new WeatherReporter();
